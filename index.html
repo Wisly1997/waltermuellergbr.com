@@ -1,0 +1,1345 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Walter & Müller GbR – Ihr zuverlässiger Partner für Gebäudereinigung, Gartenpflege, Entrümpelung und Hausmeisterservice. Persönlich, flexibel und zuverlässig.">
+<title>Walter & Müller | Gebäudereinigung & Hausmeisterservice</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --blue: #174d83;
+  --dark: #102e4d;
+  --green: #b6d92b;
+  --light: #f5f7f8;
+  --white: #ffffff;
+  --text: #263746;
+  --gray: #6b7885;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  color: var(--text);
+  line-height: 1.7;
+  background: var(--white);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.container {
+  width: min(1160px, 90%);
+  margin: auto;
+}
+
+.btn {
+  display: inline-block;
+  background: var(--green);
+  color: var(--dark);
+  padding: 15px 26px;
+  border-radius: 7px;
+  font-weight: 700;
+  transition: .3s;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.btn:hover {
+  background: #a4c41e;
+  transform: translateY(-2px);
+}
+
+.btn-outline {
+  background: transparent;
+  color: white;
+  border: 2px solid white;
+}
+
+.btn-outline:hover {
+  background: white;
+  color: var(--blue);
+}
+
+/* NAVIGATION */
+
+header {
+  background: white;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 15px rgba(0,0,0,.07);
+}
+
+.navbar {
+  min-height: 82px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  color: var(--blue);
+  font-size: 22px;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.logo span {
+  color: var(--green);
+}
+
+.logo small {
+  display: block;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: #7d9f13;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 27px;
+  list-style: none;
+}
+
+.nav-links a {
+  font-size: 13px;
+  font-weight: 600;
+  transition: .2s;
+}
+
+.nav-links a:hover {
+  color: var(--blue);
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: var(--blue);
+}
+
+/* HERO */
+
+.hero {
+  min-height: 640px;
+  display: flex;
+  align-items: center;
+  color: white;
+  background:
+    linear-gradient(90deg, rgba(10,35,59,.91), rgba(10,35,59,.40)),
+    url('https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=2000&q=85')
+    center/cover;
+}
+
+.hero-content {
+  max-width: 720px;
+  padding: 90px 0;
+}
+
+.eyebrow {
+  color: var(--green);
+  text-transform: uppercase;
+  font-size: 13px;
+  letter-spacing: 2px;
+  font-weight: 700;
+  margin-bottom: 18px;
+}
+
+.hero h1 {
+  font-size: clamp(38px, 6vw, 66px);
+  line-height: 1.12;
+  margin-bottom: 24px;
+  font-weight: 800;
+}
+
+.hero h1 span {
+  color: var(--green);
+}
+
+.hero p {
+  font-size: 17px;
+  max-width: 590px;
+  margin-bottom: 32px;
+  color: #edf2f6;
+}
+
+.hero-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+/* TRUST BAR */
+
+.trust-bar {
+  background: var(--blue);
+  color: white;
+  padding: 25px 0;
+}
+
+.trust-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  text-align: center;
+}
+
+.trust-item strong {
+  display: block;
+  color: var(--green);
+  font-size: 15px;
+}
+
+.trust-item small {
+  font-size: 12px;
+}
+
+/* GENERAL SECTIONS */
+
+section {
+  padding: 95px 0;
+}
+
+.section-heading {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto 55px;
+}
+
+.section-heading .eyebrow {
+  color: #7d9f13;
+}
+
+.section-heading h2 {
+  color: var(--blue);
+  font-size: clamp(28px, 4vw, 42px);
+  line-height: 1.25;
+  margin-bottom: 16px;
+}
+
+.section-heading p {
+  color: var(--gray);
+}
+
+/* SERVICES */
+
+.services {
+  background: var(--light);
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.service-card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 5px 25px rgba(0,0,0,.05);
+  transition: .3s;
+}
+
+.service-card:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 12px 35px rgba(0,0,0,.12);
+}
+
+.service-card img {
+  height: 210px;
+}
+
+.service-content {
+  padding: 25px;
+}
+
+.service-content h3 {
+  color: var(--blue);
+  font-size: 19px;
+  margin-bottom: 12px;
+}
+
+.service-content p {
+  font-size: 13px;
+  color: var(--gray);
+  margin-bottom: 18px;
+}
+
+.service-link {
+  color: #76980f;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+/* ABOUT */
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 65px;
+}
+
+.about-image {
+  position: relative;
+}
+
+.about-image img {
+  height: 490px;
+  border-radius: 12px;
+}
+
+.about-badge {
+  position: absolute;
+  bottom: 25px;
+  right: -20px;
+  background: var(--green);
+  color: var(--dark);
+  padding: 22px;
+  border-radius: 10px;
+  font-weight: 800;
+}
+
+.about-text .eyebrow {
+  color: #7d9f13;
+}
+
+.about-text h2 {
+  color: var(--blue);
+  font-size: 37px;
+  line-height: 1.25;
+  margin-bottom: 22px;
+}
+
+/* NEU: "Tristan und Stephan" in Grün */
+.about-text h2 span {
+  color: var(--green);
+}
+
+.about-text p {
+  margin-bottom: 18px;
+  color: var(--gray);
+}
+
+.about-text ul {
+  list-style: none;
+  margin: 22px 0 30px;
+}
+
+.about-text li {
+  margin-bottom: 10px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.about-text li::before {
+  content: "✓";
+  color: #8aaa18;
+  font-weight: 800;
+  margin-right: 12px;
+}
+
+/* USP */
+
+.advantages {
+  background: var(--blue);
+  color: white;
+}
+
+.advantages .section-heading h2 {
+  color: white;
+}
+
+.advantages .section-heading p {
+  color: #d7e3ed;
+}
+
+.advantages-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 35px;
+}
+
+.advantage {
+  text-align: center;
+  padding: 25px;
+}
+
+.advantage-icon {
+  width: 65px;
+  height: 65px;
+  display: grid;
+  place-items: center;
+  background: var(--green);
+  color: var(--dark);
+  border-radius: 50%;
+  font-size: 27px;
+  margin: 0 auto 20px;
+}
+
+.advantage h3 {
+  margin-bottom: 12px;
+  font-size: 17px;
+}
+
+.advantage p {
+  color: #d5e1eb;
+  font-size: 13px;
+}
+
+/* PROCESS */
+
+.process-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.process-item {
+  padding: 30px;
+  background: var(--light);
+  border-radius: 10px;
+  text-align: center;
+}
+
+.process-number {
+  font-size: 38px;
+  color: #8baa1b;
+  font-weight: 800;
+}
+
+.process-item h3 {
+  color: var(--blue);
+  margin: 10px 0;
+}
+
+/* REVIEWS */
+
+.reviews {
+  background: var(--light);
+}
+
+.review-box {
+  background: white;
+  border-radius: 12px;
+  padding: 40px;
+  max-width: 750px;
+  margin: auto;
+  text-align: center;
+  box-shadow: 0 5px 25px rgba(0,0,0,.05);
+}
+
+.stars {
+  color: #e6ae23;
+  font-size: 27px;
+  margin-bottom: 12px;
+}
+
+.review-box h3 {
+  color: var(--blue);
+  margin-bottom: 12px;
+}
+
+.review-box p {
+  color: var(--gray);
+  margin-bottom: 22px;
+}
+
+/* CONTACT */
+
+.contact {
+  background: var(--blue);
+  color: white;
+}
+
+.contact .section-heading h2 {
+  color: white;
+}
+
+.contact .section-heading p {
+  color: #d9e5ee;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: .8fr 1.2fr;
+  gap: 55px;
+  align-items: start;
+}
+
+.contact-info h3 {
+  font-size: 25px;
+  margin-bottom: 18px;
+}
+
+.contact-info p {
+  color: #d9e5ee;
+  margin-bottom: 25px;
+}
+
+.contact-detail {
+  margin: 20px 0;
+  font-size: 14px;
+}
+
+.contact-detail strong {
+  display: block;
+  color: var(--green);
+  margin-bottom: 5px;
+}
+
+.contact-form {
+  background: white;
+  color: var(--text);
+  padding: 35px;
+  border-radius: 12px;
+}
+
+.contact-form h3 {
+  color: var(--blue);
+  margin-bottom: 22px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+.form-group {
+  margin-bottom: 17px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 12px;
+  font-weight: 700;
+  margin-bottom: 7px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 13px;
+  border: 1px solid #dce2e7;
+  border-radius: 6px;
+  font-family: inherit;
+  font-size: 13px;
+  outline: none;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: var(--blue);
+}
+
+.form-group textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.privacy {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  font-size: 11px;
+  margin-bottom: 20px;
+  color: var(--gray);
+}
+
+.privacy input {
+  margin-top: 4px;
+}
+
+.contact-form .btn {
+  width: 100%;
+}
+
+/* FOOTER */
+
+footer {
+  background: #102b46;
+  color: white;
+  padding: 45px 0 20px;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 40px;
+  margin-bottom: 35px;
+}
+
+footer h3 {
+  color: var(--green);
+  margin-bottom: 15px;
+}
+
+footer p, footer a {
+  font-size: 12px;
+  color: #c8d4df;
+}
+
+footer ul {
+  list-style: none;
+}
+
+footer li {
+  margin-bottom: 8px;
+}
+
+.footer-bottom {
+  border-top: 1px solid #34516c;
+  padding-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+/* MOBILE */
+
+@media(max-width: 850px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 82px;
+    left: 0;
+    width: 100%;
+    background: white;
+    flex-direction: column;
+    align-items: stretch;
+    padding: 25px 5%;
+    gap: 20px;
+    box-shadow: 0 10px 15px rgba(0,0,0,.1);
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links .btn {
+    text-align: center;
+  }
+
+  .trust-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .about-grid,
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-image {
+    margin-right: 20px;
+  }
+
+  .advantages-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .process-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media(max-width: 550px) {
+  section {
+    padding: 65px 0;
+  }
+
+  .hero {
+    min-height: 570px;
+  }
+
+  .hero h1 {
+    font-size: 39px;
+  }
+
+  .services-grid,
+  .advantages-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .contact-form {
+    padding: 23px;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-text h2 {
+    font-size: 30px;
+  }
+
+  .about-badge {
+    right: -10px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+
+<header>
+  <div class="container navbar">
+
+    <a href="#start" class="logo">
+      WALTER <span>&amp;</span> MÜLLER GbR
+      <small>Gebäudereinigung</small>
+    </a>
+
+    <button class="menu-toggle" id="menuToggle"
+      aria-label="Menü öffnen" aria-expanded="false">☰</button>
+
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#start">Startseite</a></li>
+      <li><a href="#leistungen">Leistungen</a></li>
+      <li><a href="#ueber-uns">Über uns</a></li>
+      <li><a href="#vorteile">Warum wir?</a></li>
+      <li><a href="#bewertungen">Bewertungen</a></li>
+      <li><a href="#kontakt" class="btn">Kontakt aufnehmen</a></li>
+    </ul>
+
+  </div>
+</header>
+
+
+<!-- HERO -->
+
+<section class="hero" id="start">
+  <div class="container">
+    <div class="hero-content">
+
+      <div class="eyebrow">
+        Persönlich. Zuverlässig. Engagiert.
+      </div>
+
+      <h1>
+        Wir packen an.<br>
+        Sie können sich <span>entspannen.</span>
+      </h1>
+
+      <p>
+        Ob Gebäudereinigung, Entrümpelung, Gartenpflege oder
+        Hausmeisterservice – wir kümmern uns persönlich
+        und zuverlässig um Ihre Anliegen.
+      </p>
+
+      <div class="hero-buttons">
+        <a href="#kontakt" class="btn">Jetzt unverbindlich anfragen →</a>
+        <a href="#leistungen" class="btn btn-outline">Unsere Leistungen</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- TRUST BAR -->
+
+<div class="trust-bar">
+  <div class="container trust-grid">
+
+    <div class="trust-item">
+      <strong>✓ Diskret und Zuverlässig</strong>
+      <small>Auf uns ist Verlass</small>
+    </div>
+
+    <div class="trust-item">
+      <strong>✓ Persönlich</strong>
+      <small>Gründer packen selbst an</small>
+    </div>
+
+    <div class="trust-item">
+      <strong>✓ Flexibel</strong>
+      <small>Auch kurzfristige Termine</small>
+    </div>
+
+    <div class="trust-item">
+      <strong>✓ Fair</strong>
+      <small>Transparente Preise</small>
+    </div>
+
+  </div>
+</div>
+
+
+<!-- LEISTUNGEN -->
+
+<section class="services" id="leistungen">
+  <div class="container">
+
+    <div class="section-heading">
+      <div class="eyebrow">Was wir für Sie tun</div>
+      <h2>Unsere Leistungen</h2>
+      <p>
+        Verschiedene Dienstleistungen aus einer Hand.
+        Für Privatkunden und Unternehmen.
+      </p>
+    </div>
+
+    <div class="services-grid">
+
+      <article class="service-card">
+        <img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=800&q=80" alt="Solarreinigung">
+        <div class="service-content">
+          <h3>Entrümpelung & Entsorgung</h3>
+          <p>
+            Private und gewerbliche Entrümpelungen.
+            Zuverlässig, diskret und sorgfältig.
+          </p>
+          <a href="#kontakt" class="service-link">Anfrage stellen →</a>
+        </div>
+      </article>
+
+      <article class="service-card">
+        <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=800&q=80" alt="Büroreinigung">
+        <div class="service-content">
+          <h3>Büro- & Gebäudereinigung</h3>
+          <p>
+            Saubere Arbeitsplätze und gepflegte Räumlichkeiten
+            für Unternehmen und Gewerbekunden.
+          </p>
+          <a href="#kontakt" class="service-link">Anfrage stellen →</a>
+        </div>
+      </article>
+
+      <article class="service-card">
+        <img src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?auto=format&fit=crop&w=800&q=80" alt="Gartenpflege">
+        <div class="service-content">
+          <h3>Gartenpflege</h3>
+          <p>
+            Pflege von Grünflächen, Gartenanlagen
+            und Außenbereichen.
+          </p>
+          <a href="#kontakt" class="service-link">Anfrage stellen →</a>
+        </div>
+      </article>
+
+      <article class="service-card">
+        <img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=800&q=80" alt="Solarreinigung">
+        <div class="service-content">
+          <h3>Solarreinigung</h3>
+          <p>
+            Professionelle Reinigung von Solaranlagen
+            für gepflegte und saubere Oberflächen.
+          </p>
+          <a href="#kontakt" class="service-link">Anfrage stellen →</a>
+        </div>
+      </article>
+
+      <article class="service-card">
+        <img src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?auto=format&fit=crop&w=800&q=80" alt="Gartenpflege">
+        <div class="service-content">
+          <h3>Grundreinigung</h3>
+          <p>
+            Gründliche Reinigung für Wohnungen,
+            Häuser und gewerbliche Räumlichkeiten.
+          </p>
+          <a href="#kontakt" class="service-link">Anfrage stellen →</a>
+        </div>
+      </article>
+
+      <article class="service-card">
+        <img src="https://images.unsplash.com/photo-1590253230532-a67f6bc61c9e?auto=format&fit=crop&w=800&q=80" alt="Steinreinigung">
+        <div class="service-content">
+          <h3>Steinreinigung</h3>
+          <p>
+            Reinigung von Einfahrten, Terrassen,
+            Garagen und gepflasterten Flächen.
+          </p>
+          <a href="#kontakt" class="service-link">Anfrage stellen →</a>
+        </div>
+      </article>
+
+      <article class="service-card">
+        <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=800&q=80" alt="Hausmeisterservice">
+        <div class="service-content">
+          <h3>Hausmeisterservice</h3>
+          <p>
+            Zuverlässige Betreuung und Pflege
+            von Immobilien und Objekten.
+          </p>
+          <a href="#kontakt" class="service-link">Anfrage stellen →</a>
+        </div>
+      </article>
+
+      <article class="service-card">
+        <img src="https://images.unsplash.com/photo-1598908314732-07113901949e?auto=format&fit=crop&w=800&q=80" alt="Gartenlaubenreinigung">
+        <div class="service-content">
+          <h3>Reinigung von Gartenlauben</h3>
+          <p>
+            Gründliche Reinigung und Pflege
+            von Gartenlauben und Gartenhäusern.
+          </p>
+          <a href="#kontakt" class="service-link">Anfrage stellen →</a>
+        </div>
+      </article>
+
+      <article class="service-card">
+        <img src="https://images.unsplash.com/photo-1599427303058-f04cbcf4756f?auto=format&fit=crop&w=800&q=80" alt="Grünschnittentsorgung">
+        <div class="service-content">
+          <h3>Grünschnittentsorgung</h3>
+          <p>
+            Fachgerechte Entsorgung von Grünabfällen
+            und Gartenresten.
+          </p>
+          <a href="#kontakt" class="service-link">Anfrage stellen →</a>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ÜBER UNS -->
+
+<section id="ueber-uns">
+  <div class="container about-grid">
+
+    <div class="about-image">
+      <img src="https://images.unsplash.com/photo-1621905251918-48416bd8575a?auto=format&fit=crop&w=1000&q=85" alt="Handwerker bei der Arbeit">
+
+      <div class="about-badge">
+        Mit Leidenschaft<br>bei der Sache.
+      </div>
+    </div>
+
+    <div class="about-text">
+
+      <div class="eyebrow">Wer wir sind</div>
+
+      <h2>Hinter der Walter &amp; Müller GbR stehen zwei Freunde aus Ulm: <span>Tristan und Stephan.</span></h2>
+
+      <p>
+        Gemeinsam haben wir bereits viele kleine Projekte im Bekanntenkreis umgesetzt. Daraus ist der Wunsch entstanden, uns damit selbstständig zu machen.
+      </p>
+
+      <p>
+        Ob Gebäudereinigung, Entrümpelung, Gartenpflege oder Hausmeisterservice: Wir packen selbst an. Bei uns landet kein Auftrag bei einem anonymen Subunternehmer, sondern bei uns persönlich. Dafür stehen wir mit unseren Namen.
+      </p>
+
+      <p>
+        Wir sind keine große Firma, und genau das ist unser Vorteil: kurze Wege, ehrliche Absprachen und echtes Interesse daran, dass ihr am Ende zufrieden seid.
+      </p>
+
+      <p>
+        Ihr habt eine Aufgabe, bei der ihr Unterstützung braucht? Meldet euch einfach bei uns. Wir freuen uns darauf, euch kennenzulernen.
+      </p>
+
+      <p>
+        Tristan und Stephan
+      </p>
+
+      <a href="#kontakt" class="btn">Lernen Sie uns kennen</a>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- VORTEILE -->
+
+<section class="advantages" id="vorteile">
+  <div class="container">
+
+    <div class="section-heading">
+      <div class="eyebrow">Ihre Vorteile</div>
+      <h2>Warum Sie auf uns setzen sollten.</h2>
+      <p>
+        Wir möchten nicht einfach nur einen Auftrag erledigen.
+        Wir möchten, dass Sie mit unserer Arbeit zufrieden sind.
+      </p>
+    </div>
+
+    <div class="advantages-grid">
+
+      <div class="advantage">
+        <div class="advantage-icon">✓</div>
+        <h3>Zuverlässigkeit</h3>
+        <p>Wir halten unsere Absprachen und nehmen unsere Arbeit ernst.</p>
+      </div>
+
+      <div class="advantage">
+        <div class="advantage-icon">★</div>
+        <h3>Sorgfältige Arbeit</h3>
+        <p>Qualität und ein gutes Ergebnis stehen für uns an erster Stelle.</p>
+      </div>
+
+      <div class="advantage">
+        <div class="advantage-icon">↗</div>
+        <h3>Flexibel buchbar</h3>
+        <p>Wir versuchen auch kurzfristige Wünsche möglich zu machen.</p>
+      </div>
+
+      <div class="advantage">
+        <div class="advantage-icon">€</div>
+        <h3>Faire Preise</h3>
+        <p>Transparente Angebote und ein faires Preis-Leistungs-Verhältnis.</p>
+      </div>
+
+      <div class="advantage">
+        <div class="advantage-icon">☺</div>
+        <h3>Persönlicher Kontakt</h3>
+        <p>Freundlich, direkt und immer auf Augenhöhe.</p>
+      </div>
+
+      <div class="advantage">
+        <div class="advantage-icon">◆</div>
+        <h3>Diskretion</h3>
+        <p>Wir behandeln Ihre Räumlichkeiten und Anliegen respektvoll.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+<!-- BEWERTUNGEN -->
+
+<section class="reviews" id="bewertungen">
+  <div class="container">
+
+    <div class="section-heading">
+      <div class="eyebrow">Kundenstimmen</div>
+      <h2>Zufriedene Kunden sind unser Antrieb.</h2>
+      <p>
+        Ihre Zufriedenheit ist unser wichtigster Maßstab.
+      </p>
+    </div>
+
+    <div class="review-box">
+
+      <div class="stars">★★★★★</div>
+
+      <h3>Überzeugt von unserer Arbeit?</h3>
+
+      <p>
+        Lesen Sie unsere Google-Bewertungen oder teilen Sie
+        Ihre eigene Erfahrung mit uns.
+      </p>
+
+      <!-- HIER SPÄTER DEN ECHTEN GOOGLE-BEWERTUNGSLINK EINFÜGEN -->
+
+      <a href="https://www.google.com/search?q=Walter+und+Müller+GbR+Gebäudereinigung+Bewertungen"
+         target="_blank" rel="noopener noreferrer" class="btn">
+        Google-Bewertungen ansehen →
+      </a>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ABLAUF -->
+
+<section>
+  <div class="container">
+
+    <div class="section-heading">
+      <div class="eyebrow">Einfach und unkompliziert</div>
+      <h2>So funktioniert die Zusammenarbeit.</h2>
+      <p>In drei einfachen Schritten zu Ihrem persönlichen Angebot.</p>
+    </div>
+
+    <div class="process-grid">
+
+      <div class="process-item">
+        <div class="process-number">01</div>
+        <h3>Kontakt aufnehmen</h3>
+        <p>Schicken Sie uns eine Anfrage oder rufen Sie uns an.</p>
+      </div>
+
+      <div class="process-item">
+        <div class="process-number">02</div>
+        <h3>Individuelles Angebot</h3>
+        <p>Wir besprechen Ihr Anliegen und erstellen ein passendes Angebot.</p>
+      </div>
+
+      <div class="process-item">
+        <div class="process-number">03</div>
+        <h3>Wir legen los</h3>
+        <p>Wir kümmern uns zuverlässig und sorgfältig um Ihren Auftrag.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- KONTAKT -->
+
+<section class="contact" id="kontakt">
+  <div class="container">
+
+    <div class="section-heading">
+      <div class="eyebrow">Wir sind für Sie da</div>
+      <h2>Was können wir für Sie tun?</h2>
+      <p>
+        Erzählen Sie uns von Ihrem Vorhaben.
+        Wir melden uns persönlich bei Ihnen.
+      </p>
+    </div>
+
+    <div class="contact-grid">
+
+      <div class="contact-info">
+
+        <h3>Kontaktieren Sie uns.</h3>
+
+        <p>
+          Sie haben Fragen oder möchten ein unverbindliches
+          Angebot erhalten? Wir freuen uns auf Ihre Anfrage.
+        </p>
+
+        <div class="contact-detail">
+          <strong>Telefon</strong>
+          <a href="tel:+491785144399">+49 178 5144399</a>
+        </div>
+
+        <div class="contact-detail">
+          <strong>E-Mail</strong>
+          <a href="mailto:waltermuellergbr@gmail.de">waltermuellergbr@gmail.de</a>
+        </div>
+
+        <div class="contact-detail">
+          <strong>Unser Einsatzgebiet</strong>
+          <span>Ulm und Umgebung</span>
+        </div>
+
+        <div class="contact-detail">
+          <strong>Unsere Arbeitsweise</strong>
+          <span>Persönlich. Flexibel. Zuverlässig.</span>
+        </div>
+
+      </div>
+
+
+      <!-- KONTAKTFORMULAR -->
+
+      <form class="contact-form" id="contactForm">
+
+        <h3>Unverbindliche Anfrage</h3>
+
+        <div class="form-row">
+
+          <div class="form-group">
+            <label for="vorname">Vorname *</label>
+            <input type="text" id="vorname" name="vorname"
+                   placeholder="Ihr Vorname" required>
+          </div>
+
+          <div class="form-group">
+            <label for="nachname">Nachname *</label>
+            <input type="text" id="nachname" name="nachname"
+                   placeholder="Ihr Nachname" required>
+          </div>
+
+        </div>
+
+        <div class="form-row">
+
+          <div class="form-group">
+            <label for="email">E-Mail-Adresse *</label>
+            <input type="email" id="email" name="email"
+                   placeholder="Ihre E-Mail" required>
+          </div>
+
+          <div class="form-group">
+            <label for="telefon">Telefonnummer</label>
+            <input type="tel" id="telefon" name="telefon"
+                   placeholder="Ihre Telefonnummer">
+          </div>
+
+        </div>
+
+        <div class="form-group">
+          <label for="leistung">Für welche Leistung interessieren Sie sich? *</label>
+
+          <select id="leistung" name="leistung" required>
+            <option value="">Bitte auswählen</option>
+            <option>Solarreinigung</option>
+            <option>Entrümpelung privat</option>
+            <option>Entrümpelung gewerblich</option>
+            <option>Büroreinigung</option>
+            <option>Hausmeisterservice</option>
+            <option>Grünschnittentsorgung</option>
+            <option>Grundreinigung</option>
+            <option>Reinigung von Gartenlauben</option>
+            <option>Gartenpflege</option>
+            <option>Steinreinigung / Einfahrt / Garage</option>
+            <option>Sonstiges</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="nachricht">Ihre Nachricht / Bemerkung</label>
+          <textarea id="nachricht" name="nachricht"
+                    placeholder="Beschreiben Sie kurz Ihr Anliegen ..."></textarea>
+        </div>
+
+        <div class="privacy">
+          <input type="checkbox" id="datenschutz" required>
+          <label for="datenschutz">
+            Ich habe die Datenschutzerklärung gelesen und stimme
+            der Verarbeitung meiner Angaben zur Bearbeitung
+            meiner Anfrage zu. *
+          </label>
+        </div>
+
+        <button type="submit" class="btn">
+          Anfrage senden →
+        </button>
+
+        <p id="formMessage" role="status" aria-live="polite"
+           style="margin-top:15px;font-size:13px;"></p>
+
+      </form>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+  <div class="container">
+
+    <div class="footer-grid">
+
+      <div>
+        <h3>WALTER &amp; MÜLLER GbR</h3>
+        <p>
+          Ihr zuverlässiger Partner für Gebäudereinigung,
+          Gartenpflege, Entrümpelung und Hausmeisterservice.
+          Persönlich und engagiert.
+        </p>
+      </div>
+
+      <div>
+        <h3>Navigation</h3>
+        <ul>
+          <li><a href="#start">Startseite</a></li>
+          <li><a href="#leistungen">Leistungen</a></li>
+          <li><a href="#ueber-uns">Über uns</a></li>
+          <li><a href="#kontakt">Kontakt</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3>Rechtliches</h3>
+        <ul>
+          <li><a href="impressum.html">Impressum</a></li>
+          <li><a href="datenschutz.html">Datenschutz</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <p>© <span id="year"></span> Walter &amp; Müller GbR. Alle Rechte vorbehalten.</p>
+      <p>Mit Leidenschaft für gute Arbeit.</p>
+    </div>
+
+  </div>
+</footer>
+
+
+<script>
+
+// MOBILE MENÜ
+
+const menuToggle = document.getElementById('menuToggle');
+const navLinks = document.getElementById('navLinks');
+
+menuToggle.addEventListener('click', function() {
+  const isOpen = navLinks.classList.toggle('active');
+  menuToggle.setAttribute('aria-expanded', isOpen);
+  menuToggle.textContent = isOpen ? '✕' : '☰';
+});
+
+document.querySelectorAll('.nav-links a').forEach(link => {
+  link.addEventListener('click', () => {
+    navLinks.classList.remove('active');
+    menuToggle.textContent = '☰';
+    menuToggle.setAttribute('aria-expanded', 'false');
+  });
+});
+
+// AKTUELLES JAHR
+
+document.getElementById('year').textContent =
+  new Date().getFullYear();
+
+// KONTAKTFORMULAR
+
+document.getElementById('contactForm').addEventListener('submit',
+function(event) {
+
+  event.preventDefault();
+
+  const message = document.getElementById('formMessage');
+
+  message.style.color = '#c0392b';
+
+  message.textContent =
+    'muss noch verknüpft werden.';
+
+});
+
+</script>
+
+</body>
+</html>
