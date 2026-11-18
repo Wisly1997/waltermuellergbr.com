@@ -1091,7 +1091,7 @@ footer p, footer a {
 
         <div class="contact-detail">
           <strong>E-Mail</strong>
-          <a href="mailto:waltermuellergbr@gmail.com">waltermuellergbr@gmail.com</a>
+          <a href="mailto:waltermuellergbr@gmail.de">waltermuellergbr@gmail.de</a>
         </div>
 
         <div class="contact-detail">
@@ -1110,6 +1110,10 @@ footer p, footer a {
       <!-- KONTAKTFORMULAR -->
 
       <form class="contact-form" id="contactForm">
+      <input type="hidden" name="access_key" value="60a3be2b-b626-4474-b75a-8d6f16946259">
+<input type="hidden" name="subject" value="Neue Anfrage über die Website">
+<input type="hidden" name="from_name" value="Website Walter & Müller">
+<input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
 
         <h3>Unverbindliche Anfrage</h3>
 
@@ -1140,7 +1144,7 @@ footer p, footer a {
           <div class="form-group">
             <label for="telefon">Telefonnummer *</label>
             <input type="tel" id="telefon" name="telefon"
-                   placeholder="Ihre Telefonnummer">
+                   placeholder="Ihre Telefonnummer" required>
           </div>
 
         </div>
@@ -1235,18 +1239,8 @@ document.getElementById('year').textContent =
 
 // KONTAKTFORMULAR
 
-document.getElementById('contactForm').addEventListener('submit',
-function(event) {
-
-  event.preventDefault();
-
-  const message = document.getElementById('formMessage');
-
-  message.style.color = '#c0392b';
-
-  message.textContent =
-    'muss noch verknüpft werden.';
-
+document.getElementById('contactForm').addEventListener('submit', async function(event) {
+  ...neuer Code...
 });
 
 </script>
